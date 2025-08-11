@@ -1,0 +1,160 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Banner section */
+.Banner {
+  position: relative;
+  height: 480px; /* your requested height */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 60px;
+  padding-bottom: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 -180px 140px -40px rgba(17, 17, 17, 0.9);
+}
+
+/* Banner content container */
+.banner_display {
+  max-width: 600px;          /* limits the width of all banner content */
+  display: flex;
+  flex-direction: column;    /* stack children vertically */
+  padding: 40px 50px 0 0;
+  color: #fff;
+  padding-top: 280px; 
+}
+
+
+/* Banner title */
+.banner_title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  color: white;
+  word-wrap: break-word;      /* allow title text to wrap */
+  overflow-wrap: break-word;
+}
+
+/* Banner description */
+.banner_description {
+  max-width: 450px;            /* limits width of description */
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Buttons container */
+.banner_buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Buttons styling */
+.banner_button {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.banner_button:hover {
+  background-color: #e50914;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(229, 9, 20, 0.8);
+}
+
+/* Fade effect at the bottom */
+.banner_fade_bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(17, 17, 17, 0.8),
+    #111
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Responsive for tablets */
+@media (max-width: 900px) {
+  .Banner {
+    height: 600px;
+    padding-left: 30px;
+    padding-bottom: 60px;
+  }
+
+  .banner_display {
+    max-width: 90%;
+    padding: 30px 40px 0 0;
+  }
+
+  .banner_title {
+    font-size: 3rem;
+  }
+
+  .banner_description {
+    font-size: 1.1rem;
+    max-width: 100%;  /* let description fill container on smaller screens */
+  }
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+  .Banner {
+    height: 450px;
+    padding-left: 20px;
+    padding-bottom: 40px;
+  }
+
+  .banner_display {
+    max-width: 100%;
+    padding: 20px 20px 0 0;
+  }
+
+  .banner_title {
+    font-size: 2rem;
+  }
+
+  .banner_description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .banner_buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .banner_button {
+    width: 100%;
+    text-align: center;
+  }
+}
